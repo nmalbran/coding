@@ -25,8 +25,6 @@ def count_measurements_larger_in_window(filename: str, window: int) -> int:
 	for i in range(0, len(measurements) - window+1):
 		measurements_sum.append(sum(measurements[i:i+window]))
 
-	# print(measurements_sum)
-
 	increases = 0
 	for i in range(1, len(measurements_sum)):
 		if measurements_sum[i] > measurements_sum[i-1]:
